@@ -1,3 +1,159 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+/* Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff; /* white paper base */
+  color: #111;
+}
+
+@keyframes stripeShift {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Rice paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/static/paper.png") repeat;
+  background-size: 400px;
+  opacity: 0.25;  /* stronger for visible grain */
+  pointer-events: none;
+  z-index: -1;
+  animation: paperShift 120s linear infinite;
+}
+
+
+
+@keyframes paperShift {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Breathing vignette aura (ink bleed effect) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0) 75%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+  z-index: -1;
+  animation: vignettePulse 20s ease-in-out infinite;
+}
+
+@keyframes vignettePulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.03);
+  }
+}
+
+/* Typography -------------------------------------------------- */
+
+/* Headings: dojo red (torii gate red) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #b22222; /* Japanese deep red */
+}
+
+/* Body: minimalist sans on white */
+body, p, li, blockquote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #111; /* almost black */
+}
+
+/* Code blocks: ink frame look */
+code, pre, kbd, samp {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  background: rgba(0,0,0,0.08);
+  color: #111;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Dojo brushstroke accent under h1 */
+h1 {
+  position: relative;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 100%; height: 6px;
+  background: url("/static/brushstroke.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.85;
+}
+
+
+/* ========================= */
+/* Dojo-styled 404 page      */
+/* ========================= */
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+  color: #b22222; /* dojo red */
+}
+
+.notFound h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111; /* ink black */
+  position: relative;
+}
+
+.notFound h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 8px;
+  background: url("/static/brushstroke.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.notFound p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.notFound a {
+  font-family: 'Fira Code', monospace;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #b22222;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #b22222;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.notFound a:hover {
+  background: #b22222;
+  color: white;
+}

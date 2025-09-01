@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Pedro Ribeiro — Systems Engineering Vault",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -20,36 +20,36 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
+  fontOrigin: "googleFonts",
+  cdnCaching: true,
+  typography: {
+    header: "Noto Serif JP",   // dojo red serif
+    body: "Inter",             // clean hacker sans
+    code: "Fira Code",         // hacker monospace
+  },
+  colors: {
+    lightMode: {
+      light: "#faf8f8",
+      lightgray: "#e5e5e5",
+      gray: "#b8b8b8",
+      darkgray: "#4e4e4e",
+      dark: "#2b2b2b",
+      secondary: "#b22222",  // dojo red accent
+      tertiary: "#111111",   // ink black
+      highlight: "rgba(178, 34, 34, 0.15)",
+      textHighlight: "#b2222288",
+    },
+    darkMode: {
+      light: "#161618",
+      lightgray: "#393639",
+      gray: "#646464",
+      darkgray: "#d4d4d4",
+      dark: "#ebebec",
+      secondary: "#ff4b4b", // glowing red in dark mode
+      tertiary: "#dcdcdc",
+      highlight: "rgba(255, 75, 75, 0.15)",
+      textHighlight: "#ff4b4b88",
+	}
       },
     },
   },
