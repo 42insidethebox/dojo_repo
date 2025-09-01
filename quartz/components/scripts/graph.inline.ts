@@ -171,6 +171,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     .force("link", forceLink(graphData.links).distance(linkDistance))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
+	simulation.alphaDecay(0.002)
+	simulation.alpha(1).restart()
   const radius = (Math.min(width, height) / 2) * 0.8
   if (enableRadial) simulation.force("radial", forceRadial(radius).strength(0.2))
 
@@ -527,13 +529,21 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   function animate(time: number) {
     if (stopAnimation) return
     for (const n of nodeRenderData) {
-      const { x, y } = n.simulationData
-      if (!x || !y) continue
-      n.gfx.position.set(x + width / 2, y + height / 2)
-      if (n.label) {
-        n.label.position.set(x + width / 2, y + height / 2)
-      }
-    }
+  const { x, y } = n.simulationData
+  if (!x || !y) continue
+
+  // position
+  n.gfx.position.set(x + width / 2, y + height / 2)
+  if (n.label) {
+    n.label.position.set(x + width / 2, y + height / 2)
+  }
+
+  // pulse: sine wave breathing effect
+  const baseR = nodeRadius(n.simulationData)
+  const pulse = 1.5 * Math.sin(time / 300 + (n.simulationData.index ?? 0))
+  n.gfx.clear()
+  n.gfx.circle(0, 0, baseR + pulse).fill({ color: n.color })
+}
 
     for (const l of linkRenderData) {
       const linkData = l.simulationData

@@ -7,10 +7,15 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
   const baseDir = url.pathname
 
   return (
-    <article class="popover-hint">
+    <article class="popover-hint" style={{ textAlign: "center", padding: "2rem" }}>
       <h1>404</h1>
-	  <p>🥋 Oooopsie — this one is sealed in the dojo archives.</p>
-	  <p><em>(Private notes stay private, no gold coins required.)</em></p>
+      <img 
+        src="/static/forbidden.png" 
+        alt="Forbidden scroll" 
+        style={{ maxWidth: "300px", margin: "1.5rem auto", display: "block" }} 
+      />
+      <p>🥋 Oooopsie — this one is sealed in the dojo archives.</p>
+      <p><em>(Private notes stay private, no gold coins required.)</em></p>
       <p>{i18n(cfg.locale).pages.error.notFound}</p>
       <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
     </article>

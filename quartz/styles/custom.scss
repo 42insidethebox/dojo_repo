@@ -1,18 +1,41 @@
 @use "./base.scss";
-
-/* Reset */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #fff; /* white paper base */
-  color: #111;
+#quartz-root {
+  background: transparent !important;
+  color: inherit;
 }
 
+/* Light mode root inherits parchment */
+html[data-theme="light"] #quartz-root {
+  background: var(--light) !important;
+}
+
+/* Dark mode root inherits dojo gradient */
+html[data-theme="dark"] #quartz-root {
+  background: linear-gradient(-45deg, #1a1a1a, #222, #2a2a2a, #1a1a1a) !important;
+  background-size: 400% 400% !important;
+  animation: gradientShift 60s ease infinite !important;
+}
+/* ========================================================= */
+/* Animations                                                */
+/* ========================================================= */
 @keyframes stripeShift {
   0%   { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
 }
+
+@keyframes paperShift {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes vignettePulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50%      { opacity: 0.3;  transform: scale(1.03); }
+}
+
+/* ========================================================= */
+/* Background Layers (applies to both light & dark modes)    */
+/* ========================================================= */
 
 /* Rice paper texture overlay */
 body::before {
@@ -21,20 +44,13 @@ body::before {
   inset: 0;
   background: url("/static/paper.png") repeat;
   background-size: 400px;
-  opacity: 0.25;  /* stronger for visible grain */
+  opacity: 0.25;  /* stronger grain in light mode */
   pointer-events: none;
   z-index: -1;
   animation: paperShift 120s linear infinite;
 }
 
-
-
-@keyframes paperShift {
-  0%   { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
-}
-
-/* Breathing vignette aura (ink bleed effect) */
+/* Breathing vignette aura (ink bleed) */
 body::after {
   content: "";
   position: fixed;
@@ -45,46 +61,40 @@ body::after {
   animation: vignettePulse 20s ease-in-out infinite;
 }
 
-@keyframes vignettePulse {
-  0%, 100% {
-    opacity: 0.15;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.3;
-    transform: scale(1.03);
-  }
-}
+/* ========================================================= */
+/* Typography & Layout                                       */
+/* ========================================================= */
 
-/* Typography -------------------------------------------------- */
-
-/* Headings: dojo red (torii gate red) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #b22222; /* Japanese deep red */
-}
-
-/* Body: minimalist sans on white */
+/* Base text */
 body, p, li, blockquote {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
-  color: #111; /* almost black */
+  color: var(--dark);
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
-/* Code blocks: ink frame look */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--secondary); /* dojo red in light, glowing red in dark */
+  transition: color 0.3s ease;
+}
+
+/* Code blocks */
 code, pre, kbd, samp {
   font-family: 'Fira Code', monospace;
   font-size: 0.95rem;
-  background: rgba(0,0,0,0.08);
-  color: #111;
+  background: var(--lightgray);
+  color: var(--dark);
   padding: 0.2em 0.4em;
   border-radius: 3px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dojo brushstroke accent under h1 */
+/* Dojo brushstroke under H1 */
 h1 {
   position: relative;
 }
@@ -98,11 +108,9 @@ h1::after {
   opacity: 0.85;
 }
 
-
-/* ========================= */
-/* Dojo-styled 404 page      */
-/* ========================= */
-
+/* ========================================================= */
+/* Dojo-styled 404 Page                                      */
+/* ========================================================= */
 .notFound {
   display: flex;
   flex-direction: column;
@@ -111,17 +119,16 @@ h1::after {
   min-height: 80vh;
   text-align: center;
   font-family: 'Noto Serif JP', serif;
-  color: #b22222; /* dojo red */
+  color: var(--secondary);
 }
 
 .notFound h1 {
   font-size: 6rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #111; /* ink black */
+  color: var(--dark);
   position: relative;
 }
-
 .notFound h1::after {
   content: "";
   position: absolute;
@@ -139,21 +146,77 @@ h1::after {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   font-family: 'Inter', sans-serif;
-  color: #333;
+  color: var(--gray);
 }
 
 .notFound a {
   font-family: 'Fira Code', monospace;
   padding: 0.6rem 1.2rem;
-  border: 2px solid #b22222;
+  border: 2px solid var(--secondary);
   border-radius: 6px;
   text-decoration: none;
-  color: #b22222;
+  color: var(--secondary);
   background: transparent;
   transition: all 0.3s ease;
 }
-
 .notFound a:hover {
-  background: #b22222;
+  background: var(--secondary);
   color: white;
+}
+
+/* ========================================================= */
+/* Sidebar Fixes                                             */
+/* ========================================================= */
+.sidebar.right {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.5rem;
+}
+.sidebar.right .graph {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* ========================================================= */
+/* Light Mode Overrides                                      */
+/* ========================================================= */
+html[data-theme="light"] body {
+  background: var(--light);
+  color: var(--dark);
+}
+html[data-theme="light"] body::before {
+  opacity: 0.25;
+}
+html[data-theme="light"] body::after {
+  background: radial-gradient(circle, rgba(0,0,0,0) 75%, rgba(0,0,0,0.4) 100%);
+}
+
+/* ========================================================= */
+/* Dark Mode Overrides                                       */
+/* ========================================================= */
+html[data-theme="dark"] body {
+  background: linear-gradient(-45deg, #1a1a1a, #222, #2a2a2a, #1a1a1a) !important;
+  background-size: 400% 400%;
+  animation: gradientShift 60s ease infinite;
+  color: var(--dark);
+}
+html[data-theme="dark"] body::before {
+  opacity: 0.1; /* faint paper grain */
+}
+html[data-theme="dark"] body::after {
+  background: radial-gradient(circle, rgba(0,0,0,0) 85%, rgba(0,0,0,0.65) 100%);
+}
+html[data-theme="dark"] h1, 
+html[data-theme="dark"] h2, 
+html[data-theme="dark"] h3, 
+html[data-theme="dark"] h4 {
+  color: var(--secondary); /* glowing dojo red */
+}
+html[data-theme="dark"] code, 
+html[data-theme="dark"] pre {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f5f5;
 }
