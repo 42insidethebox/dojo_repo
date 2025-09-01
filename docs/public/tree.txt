@@ -1,0 +1,70 @@
+.
+├── asymmetric_c
+│   ├── 01_fd_dup_chain_bomb.md
+│   ├── 02_fd_leak_visualizer.md
+│   ├── 03_read_closed_fd_trap.md
+│   ├── 04_fd_mirror_fanout.md
+│   ├── 05_fd_exhaustion_test.md
+│   ├── 06_malloc_after_fork_glitch.md
+│   ├── 07_shared_mmap_allocator.md
+│   ├── 08_malloc_tls_isolation_test.md
+│   ├── 09_arena_allocator_scope_test.md
+│   ├── 11_pipe_chain_executor.md
+│   ├── 12_pipe_zero_byte_race.md
+│   ├── 13_redirect_stdout_to_self.md
+│   ├── 14_stdout_recursive_redirection.md
+│   ├── 15_pipex_dag_graph_exec.md
+│   └── assymetric_c_index.md
+├── asymmetric_dsa
+│   ├── dsa
+│   │   └── 65-directed-graphs.c.md
+│   ├── Master Index DSA.md
+│   ├── sorting
+│   │   ├── 26-insertion-sort.c.md
+│   │   ├── 27-quick-sort.c.md
+│   │   ├── 28-merge-sort.c.md
+│   │   └── 31-quick-partition.c.md
+│   └── structures
+│       ├── 01-create-node.c.md
+│       ├── 02-insert-head.c.md
+│       ├── 03-insert-tail.c.md
+│       ├── 04-delete-head.c.md
+│       ├── 05-delete-node.c.md
+│       ├── 06-search-node.c.md
+│       ├── 07-create-stack.c.md
+│       ├── 09-stack-pop.c.md
+│       ├── 10-create-queue.c.md
+│       ├── 11-queue-enqueue.c.md
+│       ├── 12-queue-dequeue.c.md
+│       ├── 13-create-binary-tree.c.md
+│       ├── 15-binary-tree-search.c.md
+│       ├── 16-binary-tree-inorder.c.md
+│       ├── 17-binary-tree-preorder.c.md
+│       ├── 18-binary-tree-postorder.c.md
+│       ├── 19-create-graph.c.md
+│       ├── 20-add-edge.c.md
+│       ├── 21-hash-table.c.md
+│       ├── 22-hash-insert.c.md
+│       └── 25-doubly-linked-list.c.md
+├── asymmetric_pthreads
+│   ├── 01_pthread_create_basics.md
+│   ├── 02_pthread_deadlock_simulation.md
+│   ├── 03_pthread_exit_and_cleanup.md
+│   ├── 04_thread_lifecycle_demo.md
+│   ├── 05_join_vs_detach_threads.md
+│   ├── 06_mutex_vs_rwlock_under_load.md
+│   ├── 07_shared_counter_with_mutex.md
+│   ├── 08_atomic_counter_raceproof.md
+│   ├── 09_producer_consumer_condition_var.md
+│   ├── 10_philosophers_monitor_heartbeat.md
+│   ├── 14_mutex_unlock_without_lock.md
+│   ├── 15_starvation_of_edge_philo.md
+│   ├── 16_unsynchronized_stdout_race.md
+│   ├── 17_malloc_leak_detached_threads.md
+│   ├── 18_double_join_undefined_behavior.md
+│   ├── 19_mutex_destroy_before_join.md
+│   └── Index pthreads.md
+├── index.md
+└── tree.txt
+
+7 directories, 61 files
