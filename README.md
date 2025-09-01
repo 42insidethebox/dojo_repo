@@ -3,7 +3,7 @@
 Welcome to **Dojo Vault** — my personal **systems engineering vault**, built on [Quartz v4](https://github.com/jackyzha0/quartz) and customized with a **dojo-inspired design**.  
 It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**, featuring animated graphs, search notes, dynamic table of contents and backlinking.
 
-🌐 Live demo: [dojo.ch](https://dojo.ch) *(soon)*
+🌐 Live demo: [dojo.ch](https://pedro.ch)
 
 ---
 
@@ -17,7 +17,6 @@ It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**
 - 📜 **Animated backgrounds** — subtle vignette aura, rice-paper drift, optional video hero section
 - ⚡ **Fast builds** — incremental rebuilds and hot-reload during writing
 - 🧩 **Extensible** — Quartz plugin system for filters, emitters, and transformers
-- 🌍 **SEO & Sharing ready** — sitemap, RSS, social OG images
 
 ---
 
@@ -39,6 +38,6 @@ It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/pedroribeiro/dojo.ch.git
-cd dojo.ch
+git clone https://github.com/42insidethebox/dojo_repo dojo
+cd dojo
 npm install
