@@ -3,7 +3,7 @@
 Welcome to **Dojo Vault** — my personal **systems engineering vault**, built on [Quartz v4](https://github.com/jackyzha0/quartz) and customized with a **dojo-inspired design**.  
 It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**, featuring animated graphs, search notes, dynamic table of contents and backlinking.
 
-🌐 Live demo: [pedro.ch](https://pedro.ch)
+🌐 Live demo: [dojorpg.com](https://dojorpg.com)
 
 ---
 
