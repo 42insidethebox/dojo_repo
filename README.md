@@ -1,18 +1,44 @@
-# Quartz v4
+# 🥋 Dojo Vault — Systems Engineering Knowledge Graph
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Welcome to **Dojo Vault** — my personal **systems engineering vault**, built on [Quartz v4](https://github.com/jackyzha0/quartz) and customized with a **dojo-inspired design**.  
+It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**, featuring animated graphs, search notes, dynamic table of contents and backlinking.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+🌐 Live demo: [dojo.ch](https://dojo.ch) *(soon)*
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+---
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## ✨ Features
 
-## Sponsors
+- 📚 **Obsidian compatibility** — publish notes directly from your vault
+- 🔎 **Full-text search** with blazing fast SPA navigation
+- 🕸️ **Graph View** — pulsing, interactive local + global note graphs
+- 🎨 **Dojo theme** — red/black/white color palette, rice-paper background, brushstroke accents
+- 🌗 **Dark Mode** — dojo-style glowing red typography on ink-black paper
+- 📜 **Animated backgrounds** — subtle vignette aura, rice-paper drift, optional video hero section
+- ⚡ **Fast builds** — incremental rebuilds and hot-reload during writing
+- 🧩 **Extensible** — Quartz plugin system for filters, emitters, and transformers
+- 🌍 **SEO & Sharing ready** — sitemap, RSS, social OG images
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+---
+
+## 📸 Screenshots
+
+### Homepage
+![Dojo Homepage Screenshot](./docs/screenshots/homepage.png)
+
+### Graph View
+![Graph Screenshot](./docs/screenshots/graph.png)
+
+### Dark Mode
+![Dark Mode Screenshot](./docs/screenshots/darkmode.png)
+
+---
+
+## 🚀 Quick Start
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/pedroribeiro/dojo.ch.git
+cd dojo.ch
+npm install
