@@ -20,19 +20,6 @@ It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**
 
 ---
 
-## 📸 Screenshots
-
-### Homepage
-![Dojo Homepage Screenshot](./docs/screenshots/homepage.png)
-
-### Graph View
-![Graph Screenshot](./docs/screenshots/graph.png)
-
-### Dark Mode
-![Dark Mode Screenshot](./docs/screenshots/darkmode.png)
-
----
-
 ## 🚀 Quick Start
 
 Clone the repo and install dependencies:
@@ -41,3 +28,4 @@ Clone the repo and install dependencies:
 git clone https://github.com/42insidethebox/dojo_repo dojo
 cd dojo
 npm install
+```
