@@ -1,5 +1,7 @@
 # 🥋 Dojo Vault — Systems Engineering Knowledge Graph
 
+<img width="1620" height="961" alt="Image" src="https://github.com/user-attachments/assets/4df2216f-8af7-49cd-a75d-c357f146b166" />
+
 Welcome to **Dojo Vault** — my personal **systems engineering vault**, built on [Quartz v4](https://github.com/jackyzha0/quartz) and customized with a **dojo-inspired design**.  
 It blends the **discipline of a Japanese dojo** with the **clarity of Obsidian**, featuring animated graphs, search notes, dynamic table of contents and backlinking.
 
