@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Pedro Ribeiro — Systems Engineering Vault</title>
+      <link>https://dojorpg.com</link>
+      <description>Last 10 notes on Pedro Ribeiro — Systems Engineering Vault</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>index</title>
+    <link>https://dojorpg.com/</link>
+    <guid>https://dojorpg.com/</guid>
+    <description><![CDATA[ 🏯 Enter the Dojo Welcome to my coding vault — a living collection of experiments in C, systems programming, threading, allocators, and asymmetric projects. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 16:44:21 GMT</pubDate>
+  </item><item>
+    <title>01_fd_dup_chain_bomb</title>
+    <link>https://dojorpg.com/asymmetric_c/01_fd_dup_chain_bomb</link>
+    <guid>https://dojorpg.com/asymmetric_c/01_fd_dup_chain_bomb</guid>
+    <description><![CDATA[ 🔥💾 INITIATING PROJECT 01_fd_dup_chain_bomb/ Let’s weaponize dup() — turn it into a system-filling, table-clogging, FD-exhausting monster. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>02_fd_leak_visualizer</title>
+    <link>https://dojorpg.com/asymmetric_c/02_fd_leak_visualizer</link>
+    <guid>https://dojorpg.com/asymmetric_c/02_fd_leak_visualizer</guid>
+    <description><![CDATA[ 🔥 Let’s roll out your next vault weapon: 🧠 02_fd_leak_visualizer 💣 FD Leak Visualizer See what happens when FDs are opened without being closed. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>03_read_closed_fd_trap</title>
+    <link>https://dojorpg.com/asymmetric_c/03_read_closed_fd_trap</link>
+    <guid>https://dojorpg.com/asymmetric_c/03_read_closed_fd_trap</guid>
+    <description><![CDATA[ 💥 LET’S TRIGGER SOME KERNEL TEARS 🧠 03_read_closed_fd_trap 💣 read() From a Closed FD What happens if you try to read from an FD you already closed? This vault entry shows how the kernel responds — and how you can catch and analyze it. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>04_fd_mirror_fanout</title>
+    <link>https://dojorpg.com/asymmetric_c/04_fd_mirror_fanout</link>
+    <guid>https://dojorpg.com/asymmetric_c/04_fd_mirror_fanout</guid>
+    <description><![CDATA[ 💥🔥 MIRROR MODE ENGAGED 🧠 04_fd_mirror_fanout 🔁 FD Mirror Fanout What happens when you dup() the same FD over and over? Do they share the same offset? Do they interfere? Let’s mirror one FD into a fan of duplicates and test the behavior. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>05_fd_exhaustion_test</title>
+    <link>https://dojorpg.com/asymmetric_c/05_fd_exhaustion_test</link>
+    <guid>https://dojorpg.com/asymmetric_c/05_fd_exhaustion_test</guid>
+    <description><![CDATA[ 💣💀 SYSTEM MELTDOWN SIMULATOR COMING RIGHT UP 🧠 05_fd_exhaustion_test 🔥 FD Exhaustion Test Let’s see what happens when you open as many file descriptors as your system allows. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>06_malloc_after_fork_glitch</title>
+    <link>https://dojorpg.com/asymmetric_c/06_malloc_after_fork_glitch</link>
+    <guid>https://dojorpg.com/asymmetric_c/06_malloc_after_fork_glitch</guid>
+    <description><![CDATA[ 💥 LET’S UNLEASH A CLASSIC UNIX TRAP 🧠 06_malloc_after_fork_glitch 💣 “What happens when a multithreaded process forks… then uses malloc() in the child?” ✅ Short answer: 🧨 Undefined behavior. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>07_shared_mmap_allocator</title>
+    <link>https://dojorpg.com/asymmetric_c/07_shared_mmap_allocator</link>
+    <guid>https://dojorpg.com/asymmetric_c/07_shared_mmap_allocator</guid>
+    <description><![CDATA[ 💥🧠 YES — 1000%. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>08_malloc_tls_isolation_test</title>
+    <link>https://dojorpg.com/asymmetric_c/08_malloc_tls_isolation_test</link>
+    <guid>https://dojorpg.com/asymmetric_c/08_malloc_tls_isolation_test</guid>
+    <description><![CDATA[ 🔥 Roger that. 180-IQ strategic advisor fully deployed. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item><item>
+    <title>09_arena_allocator_scope_test</title>
+    <link>https://dojorpg.com/asymmetric_c/09_arena_allocator_scope_test</link>
+    <guid>https://dojorpg.com/asymmetric_c/09_arena_allocator_scope_test</guid>
+    <description><![CDATA[ 🧠✅ Laser Focus Activated. ]]></description>
+    <pubDate>Mon, 01 Sep 2025 13:33:24 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
